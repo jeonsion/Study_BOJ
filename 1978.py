@@ -24,6 +24,8 @@ for i in range(2, 1001):
             mul+=1
 
 
+
+
 #입력받기
 N = int(input())
 M = list(map(int, input().split()))
