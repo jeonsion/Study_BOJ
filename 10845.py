@@ -1,11 +1,7 @@
 #큐
 #출력해야하는 명령어가 주어질 때 마다 한 줄에 하나씩 출력
 
-
 from collections import deque
-
-
-
 import sys
 input = sys.stdin.readline
 
