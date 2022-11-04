@@ -12,6 +12,7 @@ A_list[1] = False
 #M까지 에라토스테네스의 체 만들기
 
 for i in range(2, N):
+    #이미 삭제된 요소는 건너뜀
     if(A_list[i]!=False):
         mul = 2
         while(i*mul<=N):

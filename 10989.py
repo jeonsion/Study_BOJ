@@ -11,3 +11,7 @@ for i in range(1,10001):    #range(n)-->>range(1, 10001)로 변경하였을 때 
     if(num[i]!=0):
         for j in range(num[i]):
             print(i)
+            
+            
+            
+                        
