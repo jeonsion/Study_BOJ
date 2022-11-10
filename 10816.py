@@ -4,12 +4,10 @@
 #M은 상근이가 몇개 가지고 있는 숫자 카드인지 구해야할 M개의 정수들
 # 아이디어 : 1. 상근이가 가지고있는 카드를 정렬한다. 2. 경계값을 찾아 시작점과 끝 점의 차이로 개수를 카운트한다.
 # 접근 방법 : 문제에서 주어진 입력의 개수는 500,000이 넘음 -> O(N)으로 풀면 안될 것 같음, 그리고 밑에 '이분탐색'키워드를 봐버림 정렬알고리즘 이용하자
-
 #경계값 찾는 알고리즘 연습하기(이진탐색 이용)
 
 
 import sys
-sys.setrecursionlimit(10**7)
 input = sys.stdin.readline
 
 
@@ -86,7 +84,7 @@ def BSearch_right2(start, end, array, target):
             end = mid -1
     return start
 
-#문제점 : target을 6으로 했을 때 index out of range 발생. -> 49번째줄 while문 안에 조건 추가, 33번째 줄에도 동일하게 추가해줌
+
 
 
 N = int(input())
@@ -96,11 +94,12 @@ M_list = list(map(int, input().split()))
 
 #출력할 빈 리스트 생성
 
-# N 정렬
+# N_list정렬 -> 이분탐새은 정렬이 전제되어야함
 N_list.sort()
 
 
 
 for i in M_list:
+    #Upper bound 인덱스 - Lower bound 인덱스 결과 값으로 원소의 개수를 출력한다.
     print(BSearch_right2(0, len(N_list)-1, N_list, i)- BSearch_left2(0, len(N_list)-1, N_list, i), end = ' ')
 

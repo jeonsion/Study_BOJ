@@ -31,3 +31,4 @@ for i in A_list:
         print("NO")
     else:
         print("YES")
+        

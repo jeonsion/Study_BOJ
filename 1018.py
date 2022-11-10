@@ -1,4 +1,4 @@
-#c체스판 다시 칠하기ㅁ
+#체스판 다시 칠하기
 
 N, M = map(int, input().split())
 chess_board = []
@@ -45,7 +45,7 @@ def compare_case1():
                 compare_stack.append(count)
             if(compare_stack[0]>count):
                 compare_stack.pop()
-                compare_stack.append(count)
+                compare_stack.append(count)             
     return compare_stack[0]
 
 def compare_case2():
