@@ -34,8 +34,8 @@ def check():
             i+=1    # 한번 스택에 넣었으면 i를 증가한다
     return check_count  #얼만큼 체크했는지 반환한다
 
-#수열의 길이만큼 체크를 한 경우 
+#수열의 길이만큼 체크를 한 경우
 if(check() == N):
-    print(*result, sep = '\n')
+    print(*result, sep = '\n')  #수열의 길이만큼 체크를 한 경우
 else:
-    print("NO")
+    print("NO") #수열의 길이만큼 체크 못했을 경우 NO 출력
