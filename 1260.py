@@ -15,7 +15,7 @@
 # 2 4
 # 3 4
 
-from collections import deque
+
 
 #노드 개수 : N, 엣지 개수 : M, 탐색 시작노드 : V
 N, M, V = map(int, input().split())
@@ -28,10 +28,14 @@ for i in range(M):
     s, e = map(int, input().split())
     Node_list[s].append(e)
     Node_list[e].append(s)
+    Node_list[s].sort()
+    Node_list[e].sort()
 
-print("Node_list : ", Node_list)
+#print("Node_list : ", Node_list)
 
 def BFS(s):
+    from collections import deque
+    
     #visited 배열 0으로 초기화
     visited = [0 for i in range(N+1)]
     visited[s] = 1  #첫번째 노드 방문
@@ -49,6 +53,19 @@ def BFS(s):
                 
 
 
-BFS(V)
+def DFS(s):
+    #첫번쨰 노드 방문
+    visited[s] = 1
+    print(s, end = ' ')
+    for i in range(len(Node_list[s])):
+        x = Node_list[s][i]
+        if(visited[x] == 0):
+            DFS(x)
+    
+    
+    
 
-#노드 번호가 낮은 순서부터 방문하도록 수정하는 작업 필요
+visited = [0 for i in range(N+1)]
+DFS(V)
+print()
+BFS(V)
