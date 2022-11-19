@@ -23,7 +23,7 @@
 
 K, N = map(int,input().split())
 A_list = [int(input()) for i in range(K)]
-A_list.sort
+A_list.reverse
 
 
 

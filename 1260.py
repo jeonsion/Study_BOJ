@@ -50,8 +50,8 @@ def DFS(s):
         if(visited[x] == 0):    #방문하지 않은 노드라면 그 노드자리에서 DFS
             DFS(x)  #깊이 우선 탐색
     
-    
-    
+
+
 
 visited = [0 for i in range(N+1)]
 DFS(V)
