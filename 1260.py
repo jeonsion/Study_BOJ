@@ -1,4 +1,4 @@
-
+#DFS BFS
 import sys
 input = sys.stdin.readline
 
@@ -21,7 +21,6 @@ for i in range(M):
 #BFS함수    (잠재적으로 큐 이용)
 def BFS(s):
     from collections import deque
-    
     #visited 배열 0으로 초기화
     visited = [0 for i in range(N+1)]
     visited[s] = 1  #첫번째 노드 방문
