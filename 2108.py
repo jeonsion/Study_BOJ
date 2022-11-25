@@ -21,14 +21,15 @@ print(int(round(sum(num_list)/N, 0)))
 #2번째 줄 출력
 print(num_list[len(num_list)//2])
 #3번째 줄 출력  Counter 라이브러리를 이용한 개수 체크
+#정렬이 전제되어 있어야함
 num_s = Counter(num_list).most_common()
-if len(num_s) > 1:
-    if(num_s[0][1] == num_s[1][1]):
+if len(num_s) > 1:  #만약에 최빈값이 여러개 이상인 경우 most_common()안에 itterable 수는 1부터 시작
+    if(num_s[0][1] == num_s[1][1]): #만약 두개의 최빈값이 있다며 두번째로 작은 값 출력 ex) 0 0 1 1 -> 1출력
         print(num_s[1][0])
     else:
-        print(num_s[0][0])
+        print(num_s[0][0])  #같지 않다면 즉 압도적으로 많이 나오는 최빈값이 있다면 그 값 출력 ex)1 1 1 0 0 -> 1출력
 else:
-    print(num_s[0][0])
+    print(num_s[0][0])  #최빈값이 하나만 존재한다면 하나 출력 ex) 1 1 1 2 3 4 -> 1출력
 
 
 
