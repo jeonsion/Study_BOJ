@@ -1,12 +1,16 @@
-def question5(letters):
-    same = False
-    for i in range(len(letters)-1):
-        if(letters[i]==letters[i+1]):
-            same = True
-            break
-    
-    return same
+n = int(input())
+count = 0
+def fact(n):
+    global result
+    if n > 1:
+        return n * fact(n-1)
+    else:
+        return 1
 
-if __name__ == "__main__":
-    user_input = str(input('5번 함수에 들어갈 문자열을 넣어주세요 : '))
-    print(question5(user_input))
+num = fact(n)
+
+while num%10 == 0:
+    num//=10
+    count+=1
+    
+print(count)
