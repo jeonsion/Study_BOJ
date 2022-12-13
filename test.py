@@ -1,13 +1,12 @@
-import sys
-import copy
-input = sys.stdin.readline
+def question5(letters):
+    same = False
+    for i in range(len(letters)-1):
+        if(letters[i]==letters[i+1]):
+            same = True
+            break
+    
+    return same
 
-#N: 세로, M: 가로, B: 인벤토리안에 들어있는 블록의 개수
-N, M, B = map(int, input().split())
-land = []
-for _ in range(N):
-    land += list(map(int, input().split()))
-
-
-MAX = max(land)
-print(land)
+if __name__ == "__main__":
+    user_input = str(input('5번 함수에 들어갈 문자열을 넣어주세요 : '))
+    print(question5(user_input))
