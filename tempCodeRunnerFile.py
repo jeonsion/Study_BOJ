@@ -1,2 +1,2 @@
 
-        toggle(i[1])
+    print(M_list)
